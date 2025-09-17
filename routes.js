@@ -6,12 +6,18 @@ router.get("/", (req, res) => {
     res.render("home");
 });
 
-router.get("/create", (req, res) => {});
+router.get("/create", (req, res) => {
+    res.render("create");
+});
 
 router.get("/details/:id ", (req, res) => {});
 
 router.get("/about", (req, res) => {
     res.render("about");
+});
+
+router.get("/search", (req, res) => {
+    res.render("search");
 });
 
 router.get("*spat", (req, res) => {
