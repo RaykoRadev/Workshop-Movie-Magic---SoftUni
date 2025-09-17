@@ -2,6 +2,7 @@ import { Router } from "express";
 import { getMovieById, movies } from "./data.js";
 
 const router = Router();
+let isFirstSearchrendering = true;
 
 router.get("/", (req, res) => {
     res.render("home", { movies: movies });
@@ -23,7 +24,11 @@ router.get("/about", (req, res) => {
 });
 
 router.get("/search", (req, res) => {
-    res.render("search");
+    res.render("search", { movies: movies, isFirstSearchrendering: true });
+});
+
+router.post("/search", (req, res) => {
+    res.render("search", { isFirstSearchrendering: false });
 });
 
 router.get("*spat", (req, res) => {
