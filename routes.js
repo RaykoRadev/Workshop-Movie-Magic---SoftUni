@@ -10,7 +10,14 @@ router.get("/create", (req, res) => {
     res.render("create");
 });
 
-router.get("/details/:id ", (req, res) => {});
+router.get("/details/:id", (req, res) => {
+    const movieId = req.params.id;
+    console.log(movieId);
+    res.render(
+        "details"
+        // { id: movieId }
+    );
+});
 
 router.get("/about", (req, res) => {
     res.render("about");
