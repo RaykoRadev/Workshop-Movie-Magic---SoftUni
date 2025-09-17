@@ -1,0 +1,27 @@
+{
+    "name": "workshop-movie-magic---softuni",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "node --watch index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RaykoRadev/Workshop-Movie-Magic---SoftUni.git"
+    },
+    "keywords": [],
+    "type": "module",
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RaykoRadev/Workshop-Movie-Magic---SoftUni/issues"
+    },
+    "homepage": "https://github.com/RaykoRadev/Workshop-Movie-Magic---SoftUni#readme",
+    "description": "",
+    "dependencies": {
+        "express": "^5.1.0",
+        "express-handlebars": "^8.0.2",
+        "path": "^0.12.7"
+    }
+}
