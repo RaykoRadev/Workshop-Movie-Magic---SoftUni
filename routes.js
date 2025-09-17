@@ -1,10 +1,10 @@
 import { Router } from "express";
-import movies from "./movie-data.json" with { type: "json" }; //automaticly parse the JSON into array of objects
+import { getMovieById, movies } from "./data.js";
 
 const router = Router();
 
 router.get("/", (req, res) => {
-    res.render("home",{movies: movies});
+    res.render("home", { movies: movies });
 });
 
 router.get("/create", (req, res) => {
@@ -13,10 +13,9 @@ router.get("/create", (req, res) => {
 
 router.get("/details/:id", (req, res) => {
     const movieId = req.params.id;
-    res.render(
-        "details"
-        // { id: movieId }
-    );
+    const singleMovie = getMovieById(movieId);
+
+    res.render("details", { singleMovie: singleMovie });
 });
 
 router.get("/about", (req, res) => {
