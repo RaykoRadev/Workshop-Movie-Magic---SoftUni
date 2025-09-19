@@ -25,7 +25,13 @@ export default class Movie {
         return db.movies.find((m) => m.id === movieId);
     }
 
-    // save() {
-    //     db.push(this);
-    // }
+    async save() {
+        db.movie.push(this);
+
+        const dbDeserialized = JSON.stringify(db, null, 2);
+
+        await fs.writeFile(".src/movie-data.json", dbDeserialized);
+
+        return this;
+    }
 }
