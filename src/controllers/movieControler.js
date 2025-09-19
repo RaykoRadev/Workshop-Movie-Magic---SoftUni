@@ -13,6 +13,8 @@ movieController.get("/details/:id", async (req, res) => {
     const movieId = req.params.id;
     const singleMovie = movieServices.getOneById(movieId);
 
+    singleMovie.rating = "★".repeat(Math.floor(singleMovie.rating));
+
     res.render("details", { singleMovie: singleMovie });
 });
 
