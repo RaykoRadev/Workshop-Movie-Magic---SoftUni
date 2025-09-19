@@ -1,5 +1,5 @@
 import express from "express";
-import router from "./routes.js";
+import routers from "./routes.js";
 import handlebars from "express-handlebars";
 
 const app = express();
@@ -15,6 +15,6 @@ app.set("views", "src/views");
 
 app.use(express.static("public"));
 
-app.use("/", router);
+app.use(routers);
 
 app.listen(5000, console.log("\nServer is listening on port: 5000..."));
