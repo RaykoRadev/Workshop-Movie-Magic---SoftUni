@@ -15,7 +15,17 @@ export default class Movie {
         this.id = uuid();
     }
 
-    static getMovieById(movieId) {
-        return db.find((m) => m.id === movieId);
+    static findMovies(criteria = {}) {
+        let result = db.movies;
+
+        return result;
     }
+
+    static getMovieById(movieId) {
+        return db.movies.find((m) => m.id === movieId);
+    }
+
+    // save() {
+    //     db.push(this);
+    // }
 }

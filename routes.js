@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { getMovieById, movies } from "./data.js";
+// import { getMovieById, movies } from "./data.js";
 import Movie from "./src/services/movieService.js";
 
 const router = Router();
 let isFirstSearchrendering = true;
 
 router.get("/", (req, res) => {
+    const movies = Movie.findMovies();
     res.render("home", { movies: movies });
 });
 
