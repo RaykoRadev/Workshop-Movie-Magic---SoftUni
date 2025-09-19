@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { getMovieById, movies } from "./data.js";
+import Movie from "./src/services/movieService.js";
 
 const router = Router();
 let isFirstSearchrendering = true;
@@ -12,9 +13,9 @@ router.get("/create", (req, res) => {
     res.render("create");
 });
 
-router.get("/details/:id", (req, res) => {
+router.get("/details/:id", async (req, res) => {
     const movieId = req.params.id;
-    const singleMovie = getMovieById(movieId);
+    const singleMovie = await Movie.getMovieById(movieId);
 
     res.render("details", { singleMovie: singleMovie });
 });

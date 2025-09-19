@@ -1,5 +1,4 @@
 import express from "express";
-// import { hbs } from "./hbsConfig.js";
 import router from "./routes.js";
 import handlebars from "express-handlebars";
 
@@ -12,6 +11,7 @@ app.engine(
     })
 );
 app.set("view engine", "hbs");
+app.set("views", "src/views");
 
 app.use(express.static("public"));
 
