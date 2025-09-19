@@ -1,12 +1,13 @@
 import { Router } from "express";
 // import { getMovieById, movies } from "./data.js";
-import Movie from "./src/services/movieService.js";
+import movieService from "./src/services/movieService.js";
+// import getAll from "./src/services/movieService.js";
 
 const router = Router();
 let isFirstSearchrendering = true;
 
 router.get("/", (req, res) => {
-    const movies = Movie.findMovies();
+    const movies = movieService.getAll();
     res.render("home", { movies: movies });
 });
 
@@ -16,7 +17,7 @@ router.get("/create", (req, res) => {
 
 router.get("/details/:id", async (req, res) => {
     const movieId = req.params.id;
-    const singleMovie = await Movie.getMovieById(movieId);
+    const singleMovie = movieService.getOneById(movieId);
 
     res.render("details", { singleMovie: singleMovie });
 });
