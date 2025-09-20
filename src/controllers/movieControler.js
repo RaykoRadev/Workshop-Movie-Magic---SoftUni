@@ -1,6 +1,7 @@
 import { Router } from "express";
 import movieServices from "../services/movieService.js";
 import { log } from "console";
+import { title } from "process";
 
 const movieController = Router();
 
@@ -27,7 +28,12 @@ movieController.get("/search", (req, res) => {
     const data = req.query;
     console.log(data);
     const movies = movieServices.getAll(data);
-    res.render("search", { movies: movies });
+    res.render("search", {
+        movies: movies,
+        title: data.title,
+        genre: data.genre,
+        year: data.year,
+    });
 });
 
 export default movieController;
