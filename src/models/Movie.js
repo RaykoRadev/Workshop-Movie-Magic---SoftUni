@@ -26,11 +26,11 @@ export default class Movie {
     }
 
     async save() {
-        db.movie.push(this);
+        db.movies.push(this);
 
         const dbDeserialized = JSON.stringify(db, null, 2);
 
-        await fs.writeFile(".src/movie-data.json", dbDeserialized);
+        await fs.writeFile("./src/movie-data.json", dbDeserialized);
 
         return this;
     }

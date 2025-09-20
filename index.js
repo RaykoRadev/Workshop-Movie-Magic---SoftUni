@@ -15,6 +15,9 @@ app.set("views", "src/views");
 
 app.use(express.static("public"));
 
+// parse data from req
+app.use(express.urlencoded());
+
 app.use(routers);
 
 app.listen(5000, console.log("\nServer is listening on port: 5000..."));

@@ -6,45 +6,45 @@ SoftUni JS Back-End Course Workshop
 
 ### Setup
 
--   [ ] Initialize Project
--   [ ] Add Express Server `npm i express`
--   [ ] Config debugging
--   [ ] Add Workshop Resources
--   [ ] Setup Handlebars `npm i express-handlebars`
--   [ ] Setup static files
--   [ ] Render Home Page
--   [ ] Add Layout
--   [ ] Render About Page
+-   [x] Initialize Project
+-   [x] Add Express Server `npm i express`
+-   [x] Config debugging
+-   [x] Add Workshop Resources
+-   [x] Setup Handlebars `npm i express-handlebars`
+-   [x] Setup static files
+-   [x] Render Home Page
+-   [x] Add Layout
+-   [x] Render About Page
 
 ### Architecture and dynamic rendering
 
--   [ ] Add home controller
--   [ ] Add movie data layer
--   [ ] Add movie service
--   [ ] Render movies on home page
--   [ ] Show no movies screen
+-   [x] Add home controller
+-   [x] Add movie data layer
+-   [x] Add movie service
+-   [x] Render movies on home page
+-   [x] Show no movies screen
 
 ### Create Movie
 
--   [ ] Add Movie Controller
--   [ ] Show create movie page
--   [ ] Add routes
--   [ ] Add 404 page
--   [ ] Ready body data
+-   [x] Add Movie Controller
+-   [x] Show create movie page
+-   [x] Add routes
+-   [x] Add 404 page
+-   [x] Ready body data
 -   [ ] Create movie
-    -   [ ] Add action
-    -   [ ] Add service
-    -   [ ] Add model method for creating movie
--   [ ] Redirect after creation
--   [ ] Add unique if for each cerated movie
+    -   [x] Add action
+    -   [x] Add service
+    -   [x] Add model method for creating movie
+-   [x] Redirect after creation
+-   [x] Add unique id for each cerated movie
 
 ### Details
 
--   [ ] Add navigation button for detail page
--   [ ] Add route with param for details page
--   [ ] GetOne movie from service
--   [ ] Find movie by id from model
--   [ ] Render details page with dynamic data
+-   [x] Add navigation button for detail page
+-   [x] Add route with param for details page
+-   [x] GetOne movie from service
+-   [x] Find movie by id from model
+-   [x] Render details page with dynamic data
 
 ### Search
 
@@ -60,5 +60,5 @@ SoftUni JS Back-End Course Workshop
 ### Bonuses
 
 -   [ ] Dynamic page title
--   [ ] Rating (temp solution)
--   [ ] File Persistance
+-   [x] Rating (temp solution)
+-   [x] File Persistance

@@ -9,7 +9,11 @@ export default {
         return Movie.getMovieById(id);
     },
 
-    createMovie(data) {},
+    createMovie(data) {
+        console.log(data);
+        const newMovie = new Movie(data);
+        newMovie.save();
+    },
 
     editMovie(id, data) {},
 };
