@@ -1,19 +1,13 @@
 <section id="search">
     <h1>Search</h1>
-    <form action="" method="post" class="form">
-        <input
-            type="text"
-            class="search"
-            name="search"
-            placeholder="Title..."
-        />
-        <input type="text" name="" class="genre" placeholder="Genre..." />
-        <input type="number" name="" class="year" placeholder="Year..." />
+    <form method="get" class="form">
+        <input type="text" class="search" name="title" placeholder="Title..." />
+        <input type="text" name="genre" class="genre" placeholder="Genre..." />
+        <input type="number" name="year" class="year" placeholder="Year..." />
         <input type="submit" value="search" />
     </form>
-</section>
 
-{{#if isFirstSearchrendering}}
+
     <section id="catalog">
         <h1>All Movies</h1>
         <div class="band">
@@ -23,21 +17,13 @@
             {{>allMovies}}
 
             {{else}}
-                <div class="no-posts">
-                    <p class="no-offer">There are no posts yet...</p>
-                </div>
+
+            <div class="no-posts">
+                <p class="no-offer">There are no movies matched...</p>
+            </div>
+
             {{/each}}
 
         </div>
     </section>
-{{else}}
-
-    {{#each}}
-        {{! TODO results from the searching  }}
-    {{else}}
-        <!-- If there are no posts matched display: -->
-        <div class="no-posts">
-            <p class="no-offer">There are no movies matched...</p>
-        </div>
-    {{/each}}
-{{/if}}
+</section>

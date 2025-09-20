@@ -1,9 +1,8 @@
 import { Router } from "express";
 import movieServices from "../services/movieService.js";
+import { log } from "console";
 
 const movieController = Router();
-
-let isFirstSearchrendering = true;
 
 movieController.get("/create", (req, res) => {
     res.render("create");
@@ -25,12 +24,10 @@ movieController.get("/details/:id", async (req, res) => {
 });
 
 movieController.get("/search", (req, res) => {
-    const movies = movieServices.getAll();
-    res.render("search", { movies: movies, isFirstSearchrendering: true });
+    const data = req.query;
+    console.log(data);
+    const movies = movieServices.getAll(data);
+    res.render("search", { movies: movies });
 });
-
-// movieController.post("/search", (req, res) => {
-//     res.render("search", { isFirstSearchrendering: false });
-// });
 
 export default movieController;

@@ -18,6 +18,24 @@ export default class Movie {
     static findMovies(criteria = {}) {
         let result = db.movies;
 
+        console.log(criteria);
+
+        if (criteria.title) {
+            result = db.movies.filter((m) =>
+                m.title.toLowerCase().includes(criteria.title.toLowerCase())
+            );
+        }
+
+        if (criteria.genre) {
+            result = db.movies.filter(
+                (m) => m.genre.toLowerCase() === criteria.genre.toLowerCase()
+            );
+        }
+
+        if (criteria.year) {
+            result = db.movies.filter((m) => m.year === criteria.year);
+        }
+
         return result;
     }
 
