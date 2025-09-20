@@ -48,8 +48,8 @@ SoftUni JS Back-End Course Workshop
 
 ### Search
 
--   [ ] Show static search page
--   [ ] Render all movies
+-   [x] Show static search page
+-   [x] Render all movies
 -   [ ] Modify search form
 -   [ ] Filter movies
     -   [ ] By year
