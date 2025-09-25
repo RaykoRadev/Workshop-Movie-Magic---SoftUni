@@ -1,7 +1,5 @@
 import { Router } from "express";
 import movieServices from "../services/movieService.js";
-import { log } from "console";
-import { title } from "process";
 
 const movieController = Router();
 
@@ -17,7 +15,7 @@ movieController.post("/create", async (req, res) => {
 
 movieController.get("/details/:id", async (req, res) => {
     const movieId = req.params.id;
-    const singleMovie = movieServices.getOneById(movieId);
+    const singleMovie = await movieServices.getOneById(movieId);
 
     singleMovie.rating = "★".repeat(Math.floor(singleMovie.rating));
 
