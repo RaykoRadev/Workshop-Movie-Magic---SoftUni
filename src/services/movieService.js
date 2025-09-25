@@ -10,9 +10,8 @@ export default {
     },
 
     createMovie(data) {
-        console.log(data);
-        const newMovie = new Movie(data);
-        newMovie.save();
+        data.rating = Number(data.rating);
+        return Movie.create(data);
     },
 
     editMovie(id, data) {},

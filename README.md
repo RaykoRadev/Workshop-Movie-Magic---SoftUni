@@ -74,10 +74,10 @@ SoftUni JS Back-End Course Workshop
 -   [x] Create movie schema
 -   [x] Create movie model
 -   [x] Import file movies to database !DON'T IMPORT IDs
--   [] Fix own property handlebars problem with lean method
+-   [ ] Fix own property handlebars problem with lean method
 -   [x] General fix for own property problem
 -   [x] Refactor details
--   [] Refactor create
+-   [x] Refactor create
 -   [] Refactor search
 
 ### Add Cast
