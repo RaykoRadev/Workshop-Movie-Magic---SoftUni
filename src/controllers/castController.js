@@ -1,6 +1,5 @@
 import { Router } from "express";
 import castService from "../services/castService.js";
-import movieService from "../services/movieService.js";
 
 const castController = Router();
 
