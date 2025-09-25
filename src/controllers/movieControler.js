@@ -22,15 +22,16 @@ movieController.get("/details/:id", async (req, res) => {
     res.render("details", { singleMovie: singleMovie });
 });
 
-movieController.get("/search", (req, res) => {
-    const data = req.query;
-    console.log(data);
-    const movies = movieServices.getAll(data);
+movieController.get("/search", async (req, res) => {
+    const query = req.query;
+    // console.log(query);
+    const movies = await movieServices.getAll(query);
+    console.log(movies);
     res.render("search", {
         movies: movies,
-        title: data.title,
-        genre: data.genre,
-        year: data.year,
+        title: query.title,
+        genre: query.genre,
+        year: query.year,
     });
 });
 

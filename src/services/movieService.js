@@ -1,8 +1,28 @@
 import Movie from "../models/Movie.js";
 
 export default {
-    getAll(data) {
-        return Movie.find(data);
+    getAll(query = {}) {
+        let result = Movie.find();
+
+        // console.log(query);
+
+        if (query.title) {
+            result = result.find({
+                title: { $regex: query.title, $options: "i" },
+            });
+        }
+
+        if (query.genre) {
+            result = result.find({
+                genre: { $regex: `^${query.genre}$`, $options: "i" },
+            });
+        }
+
+        if (query.year) {
+            result = result.where("year").equals(query.year);
+        }
+
+        return result;
     },
 
     getOneById(id) {

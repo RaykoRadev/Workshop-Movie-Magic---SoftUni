@@ -78,7 +78,7 @@ SoftUni JS Back-End Course Workshop
 -   [x] General fix for own property problem
 -   [x] Refactor details
 -   [x] Refactor create
--   [] Refactor search
+-   [x] Refactor search
 
 ### Add Cast
 
