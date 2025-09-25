@@ -93,7 +93,7 @@ SoftUni JS Back-End Course Workshop
 
 -   [x] Add attach cast button
 -   [x] Add attach cast page
--   [] Add dynamic data to cast page
+-   [x] Add dynamic data to cast page
 -   [] Show cast list in attach select
 -   [] Add relation between cast and movie
 -   [] Attach cast functionallity
