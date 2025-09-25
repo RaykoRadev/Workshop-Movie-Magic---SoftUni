@@ -2,7 +2,7 @@ import Movie from "../models/Movie.js";
 
 export default {
     getAll(data) {
-        return Movie.findMovies(data);
+        return Movie.find(data);
     },
 
     getOneById(id) {

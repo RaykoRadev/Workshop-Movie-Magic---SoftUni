@@ -75,7 +75,7 @@ SoftUni JS Back-End Course Workshop
 -   [x] Create movie model
 -   [x] Import file movies to database !DON'T IMPORT IDs
 -   [] Fix own property handlebars problem with lean method
--   [] General fix for own property problem
+-   [x] General fix for own property problem
 -   [] Refactor details
 -   [] Refactor create
 -   [] Refactor search
