@@ -15,3 +15,6 @@ castController.post("/create", async (req, res) => {
 });
 
 export default castController;
+castController.get("/attach/:id", (req, res) => {
+    res.render("casts/attach");
+});

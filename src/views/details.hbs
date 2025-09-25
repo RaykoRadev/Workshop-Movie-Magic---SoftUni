@@ -20,7 +20,10 @@
 
                 <p class="disc">Description: {{singleMovie.description}}</p>
                 <p class="card-category">Category: {{singleMovie.category}}</p>
-                <button class="details">Attach Cast</button>
+                <a
+                    href="/casts/attach/{{singleMovie.id}}"
+                    class="details"
+                >Attach Cast</a>
             </div>
         </div>
         <div class="card_right">
