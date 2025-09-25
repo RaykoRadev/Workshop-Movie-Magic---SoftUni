@@ -26,7 +26,7 @@ movieController.get("/search", async (req, res) => {
     const query = req.query;
     // console.log(query);
     const movies = await movieServices.getAll(query);
-    console.log(movies);
+    // console.log(movies);
     res.render("search", {
         movies: movies,
         title: query.title,
