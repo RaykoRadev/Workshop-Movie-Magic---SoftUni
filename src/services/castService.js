@@ -5,7 +5,11 @@ export default {
         return Casts.create(data);
     },
 
-    getAll() {
-        return Casts.find();
+    getAll(castsArr = {}) {
+        let allCasts = Casts.find();
+        if (castsArr.excludes) {
+            allCasts = allCasts.nin("_id", castsArr.excludes);
+        }
+        return allCasts;
     },
 };
