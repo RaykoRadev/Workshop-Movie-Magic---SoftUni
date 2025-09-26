@@ -1,3 +1,4 @@
+import { Types } from "mongoose";
 import Movie from "../models/Movie.js";
 
 export default {
@@ -26,7 +27,7 @@ export default {
     },
 
     getOneById(id) {
-        return Movie.findById(id);
+        return Movie.findById(id).populate("casts");
     },
 
     createMovie(data) {
