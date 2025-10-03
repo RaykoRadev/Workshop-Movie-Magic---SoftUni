@@ -147,7 +147,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Authorization
 
--   [ ] Install cookie parser
+-   [x] Install cookie parser
 -   [ ] Add auth middleware
 -   [ ] Add isAuth route guard
 -   [ ] Add isGuest route guard
