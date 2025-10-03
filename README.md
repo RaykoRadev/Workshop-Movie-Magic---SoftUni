@@ -137,8 +137,8 @@ SoftUni JS Back-End Course Workshop
 -   [ ] Handle login page
     -   [x] Validate user
     -   [x] Validate password
-    -   [ ] Create token
-    -   [ ] Return token to client
+    -   [x] Create token
+    -   [x] Return token to client
 
 ### Logout
 

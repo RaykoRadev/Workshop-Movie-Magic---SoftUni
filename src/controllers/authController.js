@@ -1,6 +1,7 @@
 import { Router } from "express";
 import bcrypt from "bcrypt";
 import authServices from "../services/userService.js";
+import { generateToken } from "../utils/generateToken.js";
 
 const authController = Router();
 
@@ -29,6 +30,10 @@ authController.post("/login", async (req, res) => {
     if (!isPassMatch) {
         throw new Error("Invalid email or password!");
     }
+
+    const token = generateToken(user);
+
+    res.cookie("auth", token);
 
     res.redirect("/");
 });
