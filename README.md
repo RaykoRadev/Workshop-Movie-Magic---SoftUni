@@ -133,7 +133,7 @@ SoftUni JS Back-End Course Workshop
 
 ### Login
 
--   [ ] Add login page
+-   [x] Add login page
 -   [ ] Handle login page
     -   [ ] Validate user
     -   [ ] Validate password
