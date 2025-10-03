@@ -5,10 +5,6 @@ export default {
         return Auth.create(userData);
     },
 
-    // login() {
-    //     return Auth.findOne();
-    // },
-
     findUser(email) {
         return Auth.findOne(email);
     },

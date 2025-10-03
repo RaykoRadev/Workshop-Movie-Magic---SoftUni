@@ -142,8 +142,8 @@ SoftUni JS Back-End Course Workshop
 
 ### Logout
 
--   [ ] Add logout action
--   [ ] Clear cookie
+-   [x] Add logout action
+-   [x] Clear cookie
 
 ### Authorization
 
