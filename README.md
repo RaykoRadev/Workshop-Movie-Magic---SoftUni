@@ -126,10 +126,10 @@ SoftUni JS Back-End Course Workshop
 
 -   [x] Add new controller `authController`
 -   [x] Add registration page
--   [ ] Add User model
--   [ ] Add User service
--   [ ] Handle registration (create user in database)
--   [ ] Add password hashing
+-   [x] Add User model
+-   [x] Add User service
+-   [x] Handle registration (create user in database)
+-   [x] Add password hashing
 
 ### Login
 

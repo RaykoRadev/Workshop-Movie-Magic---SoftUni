@@ -20,6 +20,7 @@
     "homepage": "https://github.com/RaykoRadev/Workshop-Movie-Magic---SoftUni#readme",
     "description": "",
     "dependencies": {
+        "bcrypt": "^6.0.0",
         "express": "^5.1.0",
         "express-handlebars": "^8.0.2",
         "mongoose": "^8.18.2",
